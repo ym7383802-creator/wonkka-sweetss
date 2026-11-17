@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+:root {
+  --color-background: #f6f1ea;
+  --color-foreground: #211a15;
+  --color-muted-foreground: #5c4e43;
+  --color-accent: #c4a27a;
+  --color-surface: #efe8de;
+  --color-border: rgba(33, 26, 21, 0.12);
+}
+
+@layer base {
+  html {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: clip;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100svh;
+    overflow-x: clip;
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+  }
+
+  button,
+  a,
+  select,
+  input,
+  textarea {
+    touch-action: manipulation;
+  }
+}
+
+.font-display {
+  font-family: "SPS Playfair", "Playfair Display", Didot, Georgia, serif;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+@keyframes wonkaFadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.wonka-reveal {
+  opacity: 0;
+  animation: wonkaFadeSlideUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wonka-reveal {
+    opacity: 1;
+    animation: none;
+    transform: none;
+  }
+}

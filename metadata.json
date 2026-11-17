@@ -1,0 +1,8 @@
+{
+  "name": "Wonka Sweets",
+  "description": "Artisanal luxury desserts handcrafted in Mansoura, Egypt by Ayaa Elshikh. Pre-order cookies, brownies, cinnamon rolls, and tiramisu.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
